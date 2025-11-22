@@ -8,7 +8,7 @@ export const Footer = () => {
           <div>
             <img src={logo} alt="MonCallPro" className="h-10 w-auto mb-4" />
             <p className="text-sm text-muted-foreground">
-              Votre partenaire pour la création de centres d'appels au Maroc
+              Votre Centre d'Appels Clé en Main
             </p>
           </div>
           
@@ -25,9 +25,18 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>+212 5XX XXX XXX</li>
-              <li>contact@moncallpro.ma</li>
-              <li>Casablanca, Maroc</li>
+              <li>+212 676 676 676</li>
+              <li>commercial@mycallcenterinvest.com</li>
+              <li>
+                <a 
+                  href="https://www.moncallpro.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  www.moncallpro.com
+                </a>
+              </li>
             </ul>
           </div>
           
