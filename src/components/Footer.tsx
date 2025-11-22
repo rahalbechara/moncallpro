@@ -27,6 +27,7 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>+212 676 676 676</li>
               <li>commercial@mycallcenterinvest.com</li>
+              <li>Allal lfassi, Marrakech</li>
               <li>
                 <a 
                   href="https://www.moncallpro.com" 
