@@ -20,6 +20,7 @@ export const Navigation = () => {
     { label: "Pourquoi le Maroc", id: "maroc" },
     { label: "Packs d'investissement", id: "packs" },
     { label: "Comment ça marche", id: "comment" },
+    { label: "Nos réalisations", id: "realisations" },
     { label: "Témoignages", id: "temoignages" },
     { label: "Contact", id: "contact" },
   ];
