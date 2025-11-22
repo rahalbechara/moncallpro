@@ -99,8 +99,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Téléphone</h3>
-                  <p className="text-muted-foreground">+212 5XX XXX XXX</p>
-                  <p className="text-muted-foreground">+33 X XX XX XX XX</p>
+                  <p className="text-muted-foreground">+212 676 676 676</p>
                 </div>
               </div>
             </Card>
@@ -112,8 +111,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-muted-foreground">contact@moncallpro.ma</p>
-                  <p className="text-muted-foreground">info@moncallpro.ma</p>
+                  <p className="text-muted-foreground">commercial@mycallcenterinvest.com</p>
                 </div>
               </div>
             </Card>
@@ -124,16 +122,19 @@ export const Contact = () => {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Adresse</h3>
-                  <p className="text-muted-foreground">
-                    Casablanca, Maroc
-                  </p>
-                  <p className="text-muted-foreground">
-                    Zone Industrielle Ain Sebaa
-                  </p>
+                  <h3 className="font-semibold mb-1">Site Web</h3>
+                  <a 
+                    href="https://www.moncallpro.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    www.moncallpro.com
+                  </a>
                 </div>
               </div>
             </Card>
+
           </div>
         </div>
       </div>
