@@ -19,7 +19,7 @@ export const Hero = () => {
           alt="Call Center" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/80 to-background/70" />
       </div>
 
       {/* Content */}
@@ -41,17 +41,17 @@ export const Hero = () => {
               className="text-lg h-14 px-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity shadow-[var(--shadow-elegant)]"
               onClick={scrollToContact}
             >
-              Créer mon centre
+              Je veux commencer
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              className="text-lg h-14 px-8 border-2"
+              className="text-lg h-14 px-8 border-2 bg-background/10 hover:bg-background/20"
               onClick={scrollToContact}
             >
               <Phone className="mr-2 h-5 w-5" />
-              Demander un appel
+              Je demande mon appel
             </Button>
           </div>
         </div>

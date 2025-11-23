@@ -1,6 +1,12 @@
-import businessMeeting from "@/assets/business-meeting.jpg";
+import businessMeeting from "@/assets/business-handshake.jpg";
+import { Button } from "@/components/ui/button";
 
 export const Storytelling = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -24,6 +30,15 @@ export const Storytelling = () => {
               <p className="font-semibold text-foreground">
                 Avec MonCallPro, vous investissez dans une solution clé en main qui génère des résultats mesurables dès les premiers mois.
               </p>
+            </div>
+            <div className="mt-8">
+              <Button 
+                size="lg" 
+                onClick={scrollToContact}
+                className="text-lg px-8 py-6"
+              >
+                Je suis intéressé(e) par l'offre
+              </Button>
             </div>
           </div>
           <div className="relative">

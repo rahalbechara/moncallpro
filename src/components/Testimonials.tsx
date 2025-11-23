@@ -4,21 +4,21 @@ import { Star } from "lucide-react";
 export const Testimonials = () => {
   const testimonials = [
     {
-      name: "Jean-Pierre Dubois",
-      role: "PDG, TeleServices France",
-      content: "MonCallPro a transformé notre vision en réalité. En moins de 2 mois, notre centre était opérationnel avec une équipe parfaitement formée. Le ROI a été atteint en 7 mois.",
+      name: "Laurent Ménard",
+      role: "Directeur Service Client — Lille, France",
+      content: "Après dix ans de gestion d'un centre d'appels en France, les charges étaient devenues impossibles à supporter. MonCallPro s'est occupé de tout : le local, les équipes, le matériel, la formation… en même pas un mois, j'avais un centre opérationnel. Aujourd'hui, je réalise plus de bénéfices avec 20 positions au Maroc qu'avec 8 en France. Franchement, je recommande les yeux fermés.",
       rating: 5,
     },
     {
-      name: "Sophie Martin",
-      role: "Directrice Commerciale, CallEurope",
-      content: "L'accompagnement de MonCallPro a été exceptionnel. Ils ont géré tous les aspects techniques et RH, nous permettant de nous concentrer sur notre cœur de métier.",
+      name: "Sabrina El Othmani",
+      role: "Consultante & investisseuse — Paris",
+      content: "À la base, je voulais investir dans un petit appartement pour le mettre en location. Puis j'ai découvert l'offre de MonCallPro. Avec moins de budget qu'un studio, j'ai pu lancer mon propre centre d'appels. Honnêtement, c'est la meilleure décision que j'ai prise : j'ai un business qui me rapporte tous les mois sans gérer quoi que ce soit.",
       rating: 5,
     },
     {
-      name: "Ahmed Benali",
-      role: "Entrepreneur, ContactPro",
-      content: "Investir avec MonCallPro était la meilleure décision. Le professionnalisme de l'équipe et la qualité des infrastructures ont dépassé nos attentes.",
+      name: "Camille Parot",
+      role: "Entrepreneur e-commerce — Montréal",
+      content: "Je cherchais un moyen de diversifier mes revenus. MonCallPro m'a convaincu avec sa transparence : on m'a expliqué les étapes, les coûts, les délais. En un mois et demi, mon centre était opérationnel. Aujourd'hui, mon centre tourne tout seul et j'ai déjà récupéré une grande partie de mon investissement. Je prépare même un deuxième centre avec eux.",
       rating: 5,
     },
   ];

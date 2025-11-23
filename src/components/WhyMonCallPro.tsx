@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Clock, TrendingUp, Shield } from "lucide-react";
+import callcenterTeam from "@/assets/callcenter-team.jpg";
 
 export const WhyMonCallPro = () => {
   const features = [
@@ -21,8 +22,17 @@ export const WhyMonCallPro = () => {
   ];
 
   return (
-    <section id="pourquoi" className="py-24 bg-muted/50">
-      <div className="container mx-auto px-4">
+    <section 
+      id="pourquoi" 
+      className="py-24 relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${callcenterTeam})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className="absolute inset-0 bg-background/95" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Pourquoi <span className="text-primary">MonCallPro</span>

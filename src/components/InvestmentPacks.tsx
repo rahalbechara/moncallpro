@@ -101,6 +101,16 @@ export const InvestmentPacks = () => {
             </Card>
           ))}
         </div>
+        
+        <div className="text-center mt-12">
+          <Button 
+            size="lg" 
+            onClick={scrollToContact}
+            className="text-lg px-8 py-6"
+          >
+            Comment procéder ?
+          </Button>
+        </div>
       </div>
     </section>
   );
