@@ -19,26 +19,26 @@ export const Hero = () => {
           alt="Call Center" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/75 to-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-primary/20 to-black/80" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
             Votre centre d'appels{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent animate-gradient">
               clé en main
             </span>{" "}
             au Maroc
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-2xl">
+          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl">
             Vous investissez. Nous créons, recrutons, formons et livrons votre business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
-              className="text-lg h-14 px-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity shadow-[var(--shadow-elegant)]"
+              className="text-lg h-14 px-8 bg-gradient-to-r from-secondary to-accent hover:from-secondary/90 hover:to-accent/90 transition-all shadow-[var(--shadow-elegant)] hover:shadow-2xl hover:scale-105"
               onClick={scrollToContact}
             >
               Je veux commencer
@@ -47,7 +47,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="text-lg h-14 px-8 border-2 bg-background/10 hover:bg-background/20"
+              className="text-lg h-14 px-8 border-2 border-accent/50 text-white bg-background/10 hover:bg-accent/20 hover:border-accent transition-all"
               onClick={scrollToContact}
             >
               <Phone className="mr-2 h-5 w-5" />
