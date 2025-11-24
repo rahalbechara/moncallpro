@@ -104,9 +104,9 @@ export const InteractivePacksTable = () => {
 
             <div className="border-t pt-8"> 
               <h3 className="text-2xl font-bold mb-6">Inclus dans ce pack :</h3>
-              <ul className="flex space-x-6 mb-8"> {/* flex container with horizontal spacing */}
+              <ul className="flex flex-wrap gap-3 mb-8"> 
                 {packs[selectedPack].features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
+                  <li key={idx} className="flex items-center gap-3 m-1">
                     <div className="bg-secondary/20 p-2 rounded-full">
                       <Check className="h-5 w-5 text-secondary" />
                     </div>
