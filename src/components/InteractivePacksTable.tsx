@@ -42,10 +42,10 @@ export const InteractivePacksTable = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Comparatif des <span className="text-primary">packs</span>
+            Packs <span className="text-primary">d'investissement</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Plus vous investissez, plus votre ROI est rapide
+            Plus vous investissez, plus le ROI est important
           </p>
         </div>
 
@@ -57,7 +57,11 @@ export const InteractivePacksTable = () => {
                 key={pack.id}
                 variant={selectedPack === pack.id ? "default" : "outline"}
                 onClick={() => setSelectedPack(pack.id)}
-                className="text-lg px-6 py-6"
+                className={`text-lg px-6 py-6 transition-all duration-500 ${
+                  selectedPack === pack.id 
+                    ? "shadow-[var(--shadow-elegant)] scale-105" 
+                    : "hover:scale-102"
+                }`}
               >
                 {pack.postes} postes
               </Button>
@@ -65,30 +69,36 @@ export const InteractivePacksTable = () => {
           </div>
 
           {/* Comparison table */}
-          <Card className="p-8 md:p-12">
+          <Card className="p-8 md:p-12 animate-fade-in">
             <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center">
-                <Users className="h-12 w-12 mx-auto mb-4 text-primary" />
-                <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  {packs[selectedPack].postes} postes
+              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-primary/10 to-transparent hover:scale-105 transition-all duration-300">
+                <div className="bg-gradient-to-br from-primary to-primary/70 p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-primary-foreground" />
                 </div>
-                <p className="text-muted-foreground">Capacité opérationnelle</p>
+                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  {packs[selectedPack].postes}
+                </div>
+                <p className="text-muted-foreground font-semibold">postes</p>
               </div>
 
-              <div className="text-center">
-                <TrendingUp className="h-12 w-12 mx-auto mb-4 text-secondary" />
-                <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary/10 to-transparent hover:scale-105 transition-all duration-300">
+                <div className="bg-gradient-to-br from-secondary to-secondary/70 p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <TrendingUp className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   {packs[selectedPack].roi}
                 </div>
-                <p className="text-muted-foreground">Retour sur investissement</p>
+                <p className="text-muted-foreground font-semibold">ROI</p>
               </div>
 
-              <div className="text-center">
-                <Clock className="h-12 w-12 mx-auto mb-4 text-primary" />
-                <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <div className="text-center p-6 rounded-xl bg-gradient-to-br from-accent/10 to-transparent hover:scale-105 transition-all duration-300">
+                <div className="bg-gradient-to-br from-accent to-accent/70 p-4 rounded-2xl w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Clock className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   {packs[selectedPack].amount}
                 </div>
-                <p className="text-muted-foreground">Investissement total</p>
+                <p className="text-muted-foreground font-semibold">investissement</p>
               </div>
             </div>
 
