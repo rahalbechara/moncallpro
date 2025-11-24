@@ -31,7 +31,7 @@ export const WhyMonCallPro = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="absolute inset-0 bg-background/95" />
+      <div className="absolute inset-0 bg-black/70" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
