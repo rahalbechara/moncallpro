@@ -19,7 +19,7 @@ export const Hero = () => {
           alt="Call Center" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/80 to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/75 to-black/65" />
       </div>
 
       {/* Content */}
