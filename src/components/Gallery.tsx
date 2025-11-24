@@ -3,10 +3,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Building2, Users, Monitor } from "lucide-react";
 import team1 from "@/assets/gallery/team-1.jpg";
 import team2 from "@/assets/gallery/team-2.jpg";
-import modernOffice from "@/assets/gallery/modern-office.jpg";
-import meetingRoom from "@/assets/gallery/meeting-room.jpg";
-import workspace from "@/assets/gallery/workspace.jpg";
-import officeBasic from "@/assets/gallery/office-basic.jpg";
+import workspace1 from "@/assets/gallery/workspace-new-1.jpg";
+import workspace2 from "@/assets/gallery/workspace-new-2.jpg";
+import workspace3 from "@/assets/gallery/workspace-new-3.jpg";
 
 export const Gallery = () => {
   return (
@@ -40,93 +39,87 @@ export const Gallery = () => {
           </TabsList>
 
           <TabsContent value="avant-apres" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="overflow-hidden group">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Card className="overflow-hidden group hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
                 <div className="relative aspect-[4/3]">
                   <img 
-                    src={officeBasic} 
-                    alt="Bureau avant transformation" 
+                    src={workspace1} 
+                    alt="Centre d'appels opérationnel 1" 
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute top-4 left-4 bg-muted/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <span className="font-semibold text-sm">Avant</span>
-                  </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">Espace standard</h3>
+                  <h3 className="font-semibold text-lg mb-2">Centre opérationnel</h3>
                   <p className="text-muted-foreground text-sm">
-                    Configuration de base avec équipements essentiels
+                    Espace de travail moderne et équipé
                   </p>
                 </div>
               </Card>
 
-              <Card className="overflow-hidden group">
+              <Card className="overflow-hidden group hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
                 <div className="relative aspect-[4/3]">
                   <img 
-                    src={modernOffice} 
-                    alt="Bureau après transformation" 
+                    src={workspace2} 
+                    alt="Centre d'appels opérationnel 2" 
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <span className="font-semibold text-sm text-primary-foreground">Après</span>
-                  </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">Espace moderne</h3>
+                  <h3 className="font-semibold text-lg mb-2">Salle de réunion</h3>
                   <p className="text-muted-foreground text-sm">
-                    Design contemporain avec éclairage optimal et équipements haut de gamme
+                    Espaces collaboratifs optimisés
+                  </p>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden group hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
+                <div className="relative aspect-[4/3]">
+                  <img 
+                    src={workspace3} 
+                    alt="Centre d'appels opérationnel 3" 
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-lg mb-2">Postes de travail</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Configuration professionnelle complète
                   </p>
                 </div>
               </Card>
             </div>
-
-            <Card className="overflow-hidden">
-              <div className="relative aspect-[21/9]">
-                <img 
-                  src={meetingRoom} 
-                  alt="Salle de réunion premium" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-semibold text-lg mb-2">Salle de réunion premium</h3>
-                <p className="text-muted-foreground text-sm">
-                  Espace privé avec branding personnalisé pour vos réunions stratégiques
-                </p>
-              </div>
-            </Card>
           </TabsContent>
 
           <TabsContent value="equipes" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="overflow-hidden group">
+              <Card className="overflow-hidden group hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
                 <div className="relative aspect-[4/3]">
                   <img 
                     src={team1} 
-                    alt="Équipe au travail 1" 
+                    alt="Équipe du centre d'appels 1" 
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">Équipe dynamique</h3>
+                  <h3 className="font-semibold text-lg mb-2">Équipe professionnelle</h3>
                   <p className="text-muted-foreground text-sm">
-                    Nos agents qualifiés travaillent dans un environnement professionnel
+                    Personnel qualifié et formé à vos besoins
                   </p>
                 </div>
               </Card>
 
-              <Card className="overflow-hidden group">
+              <Card className="overflow-hidden group hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
                 <div className="relative aspect-[4/3]">
                   <img 
                     src={team2} 
-                    alt="Équipe au travail 2" 
+                    alt="Équipe du centre d'appels 2" 
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">Collaboration efficace</h3>
+                  <h3 className="font-semibold text-lg mb-2">Excellence opérationnelle</h3>
                   <p className="text-muted-foreground text-sm">
-                    Espaces de travail optimisés pour la productivité et le bien-être
+                    Collaboration et performance au quotidien
                   </p>
                 </div>
               </Card>
@@ -152,34 +145,34 @@ export const Gallery = () => {
 
           <TabsContent value="installations" className="space-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden group hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
                 <div className="relative aspect-[4/3]">
                   <img 
-                    src={workspace} 
-                    alt="Postes de travail modernes" 
-                    className="w-full h-full object-cover"
+                    src={workspace1} 
+                    alt="Installation complète centre d'appels" 
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">Postes de travail ergonomiques</h3>
+                  <h3 className="font-semibold text-lg mb-2">Installation complète</h3>
                   <p className="text-muted-foreground text-sm">
-                    Équipements informatiques dernière génération et mobilier ergonomique
+                    Matériel et infrastructure professionnels
                   </p>
                 </div>
               </Card>
 
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden group hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
                 <div className="relative aspect-[4/3]">
                   <img 
-                    src={modernOffice} 
-                    alt="Infrastructure moderne" 
-                    className="w-full h-full object-cover"
+                    src={workspace2} 
+                    alt="Configuration optimale" 
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">Infrastructure moderne</h3>
+                  <h3 className="font-semibold text-lg mb-2">Configuration optimale</h3>
                   <p className="text-muted-foreground text-sm">
-                    Éclairage LED, climatisation, insonorisation et connectivité fibre optique
+                    Ergonomie et efficacité maximale
                   </p>
                 </div>
               </Card>

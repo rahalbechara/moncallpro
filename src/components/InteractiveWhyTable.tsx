@@ -48,7 +48,7 @@ export const InteractiveWhyTable = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section id="pourquoi" className="py-24 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -63,10 +63,10 @@ export const InteractiveWhyTable = () => {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className={`p-8 transition-all duration-500 cursor-pointer ${
+              className={`p-8 transition-all duration-500 cursor-pointer border-2 ${
                 hoveredIndex === index
-                  ? "scale-105 shadow-[var(--shadow-elegant)]"
-                  : "hover:scale-102"
+                  ? "scale-105 shadow-[var(--shadow-elegant)] border-primary/50 bg-gradient-to-br from-primary/5 to-transparent"
+                  : "hover:scale-102 border-border"
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
