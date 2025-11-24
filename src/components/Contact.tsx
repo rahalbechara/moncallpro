@@ -5,9 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Globe } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import supabase from "@/integrations/supabase/client";
 
 export const Contact = () => {
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,12 +17,35 @@ export const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+
+    const { name, email, phone, message } = formData;
+
+    // ➤ Save lead in Supabase
+    const { error } = await supabase.from("leads").insert([
+      { name, email, phone, message }
+    ]);
+
+    setLoading(false);
+
+    if (error) {
+      toast({
+        title: "Erreur",
+        description: "Impossible de sauvegarder votre message.",
+        variant: "destructive",
+      });
+      console.error(error);
+      return;
+    }
+
+    // Success
     toast({
       title: "Message envoyé !",
       description: "Nous vous contacterons dans les plus brefs délais.",
     });
+
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
@@ -43,50 +68,47 @@ export const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <Card className="p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Input
-                  name="name"
-                  placeholder="Nom complet"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <Input
-                  name="email"
-                  type="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <Input
-                  name="phone"
-                  type="tel"
-                  placeholder="Téléphone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <Textarea
-                  name="message"
-                  placeholder="Votre message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  required
-                />
-              </div>
+              <Input
+                name="name"
+                placeholder="Nom complet"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+
+              <Input
+                name="email"
+                type="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+
+              <Input
+                name="phone"
+                type="tel"
+                placeholder="Téléphone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+
+              <Textarea
+                name="message"
+                placeholder="Votre message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={5}
+                required
+              />
+
               <Button 
-                type="submit" 
+                type="submit"
                 className="w-full bg-gradient-to-r from-primary to-secondary"
+                disabled={loading}
               >
-                Envoyer le message
+                {loading ? "Envoi..." : "Envoyer le message"}
               </Button>
             </form>
           </Card>

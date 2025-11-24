@@ -111,7 +111,7 @@ export const Gallery = () => {
               <Card className="overflow-hidden group hover:shadow-[var(--shadow-elegant)] transition-all duration-300">
                 <div className="relative aspect-[4/3]">
                   <img 
-                    src={team2} 
+                    src={workspace3}
                     alt="Équipe du centre d'appels 2" 
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
