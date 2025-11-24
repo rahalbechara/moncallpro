@@ -38,7 +38,7 @@ export const InteractivePacksTable = () => {
   };
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="packs" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -102,9 +102,9 @@ export const InteractivePacksTable = () => {
               </div>
             </div>
 
-            <div className="border-t pt-8">
+            <div className="border-t pt-8"> 
               <h3 className="text-2xl font-bold mb-6">Inclus dans ce pack :</h3>
-              <ul className="space-y-4 mb-8">
+              <ul className="flex space-x-6 mb-8"> {/* flex container with horizontal spacing */}
                 {packs[selectedPack].features.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-3">
                     <div className="bg-secondary/20 p-2 rounded-full">

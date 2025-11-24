@@ -6,7 +6,9 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
+            <a href="/">
             <img src={logo} alt="MonCallPro" className="h-10 w-auto mb-4" />
+            </a>
             <p className="text-sm text-muted-foreground">
               Votre Centre d'Appels Clé en Main
             </p>
