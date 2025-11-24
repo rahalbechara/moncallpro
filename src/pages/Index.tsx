@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { InteractiveWhyTable } from "@/components/InteractiveWhyTable";
-import { WhyMorocco } from "@/components/WhyMorocco";
+import { InteractiveWhyMoroccoTable } from "@/components/InteractiveWhyMoroccoTable";
 import { Storytelling } from "@/components/Storytelling";
 import { InteractivePacksTable } from "@/components/InteractivePacksTable";
 import { HowItWorks } from "@/components/HowItWorks";
@@ -16,7 +16,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <InteractiveWhyTable />
-      <WhyMorocco />
+      <InteractiveWhyMoroccoTable />
       <Storytelling />
       <InteractivePacksTable />
       <HowItWorks />
