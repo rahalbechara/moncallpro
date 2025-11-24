@@ -41,8 +41,8 @@ export const Storytelling = () => {
               </Button>
             </div>
           </div>
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-[var(--shadow-elegant)]">
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative overflow-hidden rounded-2xl shadow-[var(--shadow-elegant)] max-w-md">
               <img 
                 src={businessMeeting} 
                 alt="Business Meeting" 
